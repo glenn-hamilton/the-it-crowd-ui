@@ -1,14 +1,13 @@
-import axiosInstance from "../config";
+import axiosInstance from '../config';
 
 export default class ConnectionService {
     async testConnection(): Promise<string> {
         try {
             const response = await axiosInstance.get('/api/database-active');
             const message: string = response.data;
-            console.log("message-> ", message);
             return message;
         } catch (e) {
-            throw new Error("Failed to test connection, " + e)
+            throw new Error('Failed to test connection, ' + e);
         }
     }
 }
