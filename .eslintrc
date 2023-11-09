@@ -1,0 +1,29 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "unused-imports"
+    ],
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "rules" : {
+        "indent": ["error", 4],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-unused-vars": ["error", "all"],
+        "unused-imports/no-unused-imports": "error",
+        "no-trailing-spaces": "error",
+
+         // override "eslint:recommended"
+        "no-empty": "error",
+        "no-cond-assign": ["error", "always"],
+        "for-direction": "off"
+    }
+  }
