@@ -1,7 +1,8 @@
 import axiosInstance from "../config";
+import { Job } from "../models/Job";
 
 export default class JobService {
-    async getJobs(): Promise<any> {
+    async getJobs(): Promise<Job[]> {
     try{
         const response = await axiosInstance.get("/api/jobs");
         return response.data;

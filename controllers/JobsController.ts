@@ -1,6 +1,8 @@
 import { Request, Response, Application } from "express";
 import { Job } from "../models/Job";
-const jobService = require('../services/JobService')
+import JobService from "../services/JobService";
+
+let jobService = new JobService();
 
 module.exports = function(app: Application) {
 
@@ -11,6 +13,7 @@ module.exports = function(app: Application) {
             jobs = await jobService.getJobs();
         } catch (e) {
             console.error(e);
+            jobs = [];
         }
         res.render('JobTitles',{jobs:jobs})
     })

@@ -5,7 +5,6 @@ export default class ConnectionService {
         try {
             const response = await axiosInstance.get('/api/database-active');
             const message: string = response.data;
-            console.log("message-> ", message);
             return message;
         } catch (e) {
             throw new Error("Failed to test connection, " + e)
