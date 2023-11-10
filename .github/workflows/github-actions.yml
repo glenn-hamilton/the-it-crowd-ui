@@ -42,7 +42,7 @@ jobs:
 
       - name: Build & push the Docker image
         env:
-          BASE_URL: ${{ secrets.BASE_URL }}
+          BASE_URL: ${{ env.BASE_URL }}
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: employee_demo
           IMAGE_TAG: the-it-crowd-ui
