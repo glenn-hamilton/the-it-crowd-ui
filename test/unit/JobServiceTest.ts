@@ -1,4 +1,3 @@
-let axios = require('axios');
 let MockAdapter = require('axios-mock-adapter');
 let chai = require('chai');  
 const expect = chai.expect;
@@ -29,7 +28,7 @@ describe('JobService', function () {
 
       it('should throw an error when the API returns a non-200 status', async () => {
         mock.onGet("/api/jobs").reply(new Error('Could not get jobs'));
-        let error;
+        let error:string;
         try {
           await jobService.getJobs();
         } catch (e) {

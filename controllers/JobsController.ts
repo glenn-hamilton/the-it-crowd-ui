@@ -6,16 +6,16 @@ let jobService = new JobService();
 
 module.exports = function(app: Application) {
 
-    app.get('/jobs', async (req,res)=>{
+    app.get('/jobs', async (req:Request,res:Response)=>{
         let jobs: Job[];
+        let title: string = "Job Roles";
 
         try {
             jobs = await jobService.getJobs();
         } catch (e) {
             console.error(e);
-            jobs = [];
         }
-        res.render('JobTitles',{jobs:jobs})
+        res.render('JobTitles',{jobs:jobs, title:title})
     })
 
 }
