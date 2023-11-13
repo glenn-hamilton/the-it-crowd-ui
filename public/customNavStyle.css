@@ -1,0 +1,39 @@
+/* Style navigation menu links */
+
+#navItemsLower {
+    display: none;
+}
+
+.floatRight {
+    z-index: 10;
+    position: absolute;
+    right: 0;
+}
+
+.navLinkItemCustom {
+    float: left;
+    font-size: 12px;
+}
+
+/* Style the hamburger menu */
+
+#hamburger-menu {
+    float: right;
+    text-decoration: none;
+    font-size: 3vw;
+    display: block;
+    color: rgb(51, 51, 51);
+  }
+
+#hamburger-menu-close {
+    padding-left: 5px;
+    font-weight: 900;
+}
+
+#hamburger-menu:hover {
+    color: #42B54C;
+}
+
+.hidden {
+    display: none;
+}

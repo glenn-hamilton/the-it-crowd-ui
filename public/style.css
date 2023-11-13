@@ -1,0 +1,131 @@
+body {
+    background-color: rgb(236, 236, 236);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: auto;
+}
+
+.main-content {
+    margin-top: 150px;
+    width: 85vw;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.center {
+    margin: auto;
+    width: 70vw;
+}
+
+  /* Nav Bar */
+.custom-nav {
+    width: 90vw;
+    color: black;
+}
+
+  /* Nav Bar */
+.nav-link {
+    color: black;
+}
+
+  /* Nav Bar */
+.nav-text {
+    color: rgb(53, 53, 53);
+}
+
+.form-titles {
+    font-weight: bold;
+}
+
+.auth-heading {
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.custom-button {
+    margin-top: 10px;
+    background-color: #42B54C;
+    color: white;
+}
+
+.custom-button:hover {
+    background-color: #3f9746;
+    color: white;
+}
+
+  /* Nav Bar */
+#nav-cust-link {
+    color: rgb(53, 53, 53);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+  /* Nav Bar */
+#nav-cust-link:hover {
+    color: #42B54C;
+}
+
+  /* Nav Bar */
+#navbarNav {
+    margin-left: 70px;
+}
+
+#team-image {
+    width: 60%;
+}
+
+#login-form {
+    padding: 0px 50px 0px 50px;
+}
+
+#home-image-container {
+    margin-top: 35px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    padding-top: 30px;
+}
+
+.line-break {
+    border-top: 0.5px solid rgb(230, 230, 230);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-container {
+    background-color: white;
+    padding-bottom: 60px;
+}
+
+.main-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    color: grey;
+    border-bottom: 2px;
+    border-color: rgb(88, 88, 88);
+    border-width: 70%;
+    margin-bottom: 25px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(236, 236, 236);
+    margin-top: 15px;
+}
+
+.footer-text {
+    color: darkgrey;
+    height: 70px;
+}

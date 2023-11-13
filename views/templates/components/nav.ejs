@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/public/customNavStyle.css">
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark custom-nav center">
+        <a href="/" ><img src="/public/kainoos.png" style="width: 140px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav floatRight" style="padding-right: 60px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login" id="nav-cust-link" style="margin-top: 1px;">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn disabled" id="nav-cust-link">Sign-Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout" id="nav-cust-link">Logout</a>
+              </li>
+            </ul>
+
+            <div class="nav-item floatRight">
+                <a href="javascript:void(0);" class="icon nav-link" id="hamburger-menu" onclick="hamburgerController()">
+                    <i class="fa fa-bars fa-xs" id="hamburger-menu-open"></i>
+                    <i class="fa fa-times hidden" aria-hidden="true" id="hamburger-menu-close"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div id="navItemsLower">
+    <div style="background-color: rgb(255, 255, 255); padding-left: 10vw;">
+        <a class="nav-link navLinkItemCustom" href="/" id="nav-cust-link">Home</a>
+        <a class="nav-link navLinkItemCustom" href="/employees/delivery" id="nav-cust-link">Delivery Employee</a>
+        <a class="nav-link navLinkItemCustom" href="/employee/delivery/create" id="nav-cust-link">Create New Delivery Employee</a>
+    </div>
+</div>
+
+<script>
+function hamburgerController() {
+
+    var hamburgerOpen = document.getElementById('hamburger-menu-open');
+    var hamburgerClose = document.getElementById('hamburger-menu-close');
+    var navItemsLower = document.getElementById('navItemsLower');
+
+    if (hamburgerOpen.style.display === 'none') {
+        // Show HamburgerOpen - Load Links
+        hamburgerClose.style.display = 'none';
+        hamburgerOpen.style.display = 'inline';
+        navItemsLower.style.display = 'none';
+    } else {
+        // Show HamburgerClose - Hide Links
+        hamburgerClose.style.display = 'inline'
+        hamburgerOpen.style.display = 'none'
+        navItemsLower.style.display = 'inline';
+    }
+}
+</script>
+
+<noscript>
+    <!-- Javascript Fallback, if javascript is disabled on the client broswer. -->
+
+    <style>
+        /* TO DO - Alert In Message Saying: Javascript has been displayed. */
+        #navItemsLower {
+            display: inline;
+        }
+
+        #hamburger-menu {
+            display: none;
+        }
+    </style>
+</noscript>
