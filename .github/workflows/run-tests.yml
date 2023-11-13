@@ -32,5 +32,6 @@ jobs:
       - name: Run unit-tests  
         run: npm run test-unit
 
-
-
+      # Run Code Quality Linter Check Using Eslint
+      - name: Run Linter Check For Code Quality
+        run: npm run lint

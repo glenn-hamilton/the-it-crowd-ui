@@ -6,7 +6,10 @@
   "scripts": {
     "start": "npx tsc && cp -R views dist && node dist/app.js",
     "test-unit": "ts-mocha test/unit/**/*.ts",
-    "coverage-unit": "nyc npm run test-unit"
+    "coverage-unit": "nyc npm run test-unit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint --fix . --ext .ts"
   },
   "repository": {
     "type": "git",
@@ -33,6 +36,10 @@
     "@types/mocha": "^10.0.4",
     "@types/node": "^20.8.10",
     "nyc": "^15.1.0",
-    "axios-mock-adapter": "^1.22.0"
+    "axios-mock-adapter": "^1.22.0",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-unused-imports": "^3.0.0"
   }
 }
