@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/public/bannerStyle.css">
+
+<body>
+    <div class="banner" style="background: url('<%= banner.dynamicImage %>') center/cover no-repeat;">
+        <div class="overlay"></div>
+        <div class="text-overlay">
+            <h1><%= banner.dynamicText %></h1>
+            <a href="<%= banner.dynamicUrl %>"><button><%= banner.buttonText %></button></a>
+        </div>
+    </div>
+</body>

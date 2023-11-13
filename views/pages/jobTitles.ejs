@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= pageTitle %></title>
+  <%- include('../templates/components/head'); %>
+</head>
+
+<%- include('../templates/components/common-nav'); %>
+
+<div class="header-image-banner">
+  <div class="overlay"></div>
+  <div class="text-overlay">
+      <h1>Find the perfect role for you</h1>
+  </div>
+</div>
+
+<div class="main-content centre">
+  <div class="row">
+    <div class="col-6 list-group">
+      <h1 id="header-left-spacing"><%= pageTitle %></h1>
+      <ul>
+        <% if (jobs.length > 0) { %>
+          <% for (let job of jobs) { %>
+
+            <li>
+              <a href="/jobs/<%= job.jobId %>">
+                <%= job.jobName %>
+              </a>
+            </li>
+
+          <% } %>
+        <% } else { %>
+
+          <li>No jobs available</li>
+          
+        <% } %>
+      </ul>
+    </div>
+    <div class="col-6">
+      <img src="/public/assets/academy2.jpeg" class="half-page-image" alt="Kainos employees watching a presentation in the office">
+    </div>
+  </div>
+</div>
+
+<%- include('../templates/components/common-footer'); %>
+
+</html>
