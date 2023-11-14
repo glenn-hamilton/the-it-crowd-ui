@@ -8,14 +8,14 @@ module.exports = function(app: Application) {
 
     app.get('/jobs', async (req:Request,res:Response)=>{
         let jobs: Job[];
-        let title: string = 'Job Roles';
+        const title:string= 'Job Roles';
 
         try {
             jobs = await jobService.getJobs();
         } catch (e) {
             console.error(e);
         }
-        res.render('JobTitles',{jobs:jobs, title:title});
+        res.render('JobTitles',{jobs, title});
     });
 
 };
