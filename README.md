@@ -28,7 +28,7 @@ Follow the steps in the above link to run the REST API
 # How to start the the-it-crowd-ui application
 
 1. Run `npm install` to build your application
-2. Start application with `npm run dev`
+2. Start application with `npm start`
 3. To check that your application is running enter url `http://localhost:3000`
 
 
@@ -37,7 +37,7 @@ Follow the steps in the above link to run the REST API
 To run unit tests run the following command:
 
 ```shell
-npm test
+npm run test-unit
 ```
 
 Run UI Tests
