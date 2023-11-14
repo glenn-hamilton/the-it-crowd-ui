@@ -1,0 +1,24 @@
+name: "NPM Audit"
+
+on:
+  schedule:
+    - cron: "30 14 * * 1-5"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      # checks out the specified code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # sets up Node.js using my current version of 14.19.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.19.0"
+
+      # runs audit checks “at 22:00 on every day-of-week from Monday through Friday”
+      - name: Run npm audit
+        run: npm audit
