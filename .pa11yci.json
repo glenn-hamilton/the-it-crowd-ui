@@ -1,0 +1,12 @@
+{
+
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe"],
+    "page": {
+      "viewport": {"width": 320, "height": 480}
+    },
+    "timeout": 1000
+  },
+  "urls": ["https://mgf63d3g3p.eu-west-1.awsapprunner.com/"]
+}
