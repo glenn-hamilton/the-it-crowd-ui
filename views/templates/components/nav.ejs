@@ -10,23 +10,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
 
             <ul class="navbar-nav floatRight" style="padding-right: 60px;">
+                <% if (typeof token == 'undefined') { %>
                 <li class="nav-item">
                     <a class="nav-link" href="/login" id="nav-cust-link" style="margin-top: 1px;">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn disabled" id="nav-cust-link">Sign-Up</a>
                 </li>
+                <% } else { %>
                 <li class="nav-item">
                   <a class="nav-link" href="/logout" id="nav-cust-link">Logout</a>
               </li>
+              <% } %>
             </ul>
 
+            <% if (typeof token != 'undefined') { %>
             <div class="nav-item floatRight">
                 <a href="javascript:void(0);" class="icon nav-link" id="hamburger-menu" onclick="hamburgerController()">
                     <i class="fa fa-bars fa-xs" id="hamburger-menu-open"></i>
                     <i class="fa fa-times hidden" aria-hidden="true" id="hamburger-menu-close"></i>
                 </a>
             </div>
+            <% } %>
         </div>
     </nav>
 </div>
@@ -34,8 +39,6 @@
 <div id="navItemsLower">
     <div style="background-color: rgb(255, 255, 255); padding-left: 10vw;">
         <a class="nav-link navLinkItemCustom" href="/" id="nav-cust-link">Home</a>
-        <a class="nav-link navLinkItemCustom" href="/employees/delivery" id="nav-cust-link">Delivery Employee</a>
-        <a class="nav-link navLinkItemCustom" href="/employee/delivery/create" id="nav-cust-link">Create New Delivery Employee</a>
     </div>
 </div>
 

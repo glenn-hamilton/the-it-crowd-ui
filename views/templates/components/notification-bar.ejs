@@ -1,9 +1,15 @@
-<div class="alert alert-warning" style="text-align: center;" role="alert">
-    This is a dark alert—check it out!
+<% if (typeof errormessage != 'undefined') { %>
 
-            <!-- {% if errormessage %}
-            <div class="alert alert-danger" role="alert">
-                {{ errormessage }}
-            </div>
-        {% endif %} -->
-</div>
+    <div class="alert alert-danger" style="text-align: center;" role="alert">
+        <%= errormessage %>
+    </div>
+
+<% } %>
+
+<% if (typeof successmessage != 'undefined') { %>
+
+    <div class="alert alert-success" style="text-align: center;" role="alert">
+        <%= successmessage %>
+    </div>
+
+<% } %>
