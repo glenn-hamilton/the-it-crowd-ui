@@ -17,7 +17,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">11</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.delayedStart">false</boolProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">30</stringProp>
@@ -36,9 +36,9 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">9miwn7w3uh.eu-west-1.awsapprunner.com</stringProp>
+          <stringProp name="HTTPSampler.domain">mgf63d3g3p.eu-west-1.awsapprunner.com</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/database-active</stringProp>
+          <stringProp name="HTTPSampler.path">/swagger#/</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -73,14 +73,14 @@
           <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Viewjobroles" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Viewjobroles" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">https://9miwn7w3uh.eu-west-1.awsapprunner.com/</stringProp>
+          <stringProp name="HTTPSampler.domain">mgf63d3g3p.eu-west-1.awsapprunner.com</stringProp>
           <stringProp name="HTTPSampler.protocol">HTTPS</stringProp>
-          <stringProp name="HTTPSampler.path">/jobs</stringProp>
+          <stringProp name="HTTPSampler.path">/api/jobs</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
