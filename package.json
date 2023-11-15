@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "npx tsc && cp -R views dist && cp -R public dist && node dist/app.js",
-    "test-unit": "ts-mocha test/unit/**/*.ts",
+    "test": "ts-mocha test/unit/**/*.ts",
     "coverage-unit": "nyc npm run test-unit",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint --fix . --ext .ts"

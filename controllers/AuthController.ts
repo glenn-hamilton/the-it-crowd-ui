@@ -1,5 +1,5 @@
 import { Request, Response, Application } from 'express';
-import { Login } from '../model/Auth';
+import { Login } from '../models/Auth';
 import AuthService from '../services/AuthService';
 
 module.exports = function(app: Application) {
@@ -15,7 +15,7 @@ module.exports = function(app: Application) {
 
             let tokenRes: String = await authService.loginInUser(data);
             if (tokenRes == null) {
-                throw new Error;
+                throw new Error('Failed To Get Token.');
             }
             req.session.token = tokenRes;
             res.redirect('/');
@@ -26,7 +26,7 @@ module.exports = function(app: Application) {
         }
     });
 
-    app.get('/logout',async (req: Request, res: Response) => {
+    app.post('/logout',async (req: Request, res: Response) => {
 
         try {
             req.session.token = undefined;

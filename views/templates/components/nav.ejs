@@ -19,7 +19,10 @@
                 </li>
                 <% } else { %>
                 <li class="nav-item">
-                  <a class="nav-link" href="/logout" id="nav-cust-link">Logout</a>
+                    <form method="post" action="/logout">
+                        <input type="hidden" name="name" value="value" />
+                        <a class="nav-link" id="nav-cust-link" style="cursor: pointer;" onclick="this.parentNode.submit();">Logout</a>
+                      </form>
               </li>
               <% } %>
             </ul>
@@ -41,38 +44,3 @@
         <a class="nav-link navLinkItemCustom" href="/" id="nav-cust-link">Home</a>
     </div>
 </div>
-
-<script>
-function hamburgerController() {
-
-    var hamburgerOpen = document.getElementById('hamburger-menu-open');
-    var hamburgerClose = document.getElementById('hamburger-menu-close');
-    var navItemsLower = document.getElementById('navItemsLower');
-
-    if (hamburgerOpen.style.display === 'none') {
-        // Show HamburgerOpen - Load Links
-        hamburgerClose.style.display = 'none';
-        hamburgerOpen.style.display = 'inline';
-        navItemsLower.style.display = 'none';
-    } else {
-        // Show HamburgerClose - Hide Links
-        hamburgerClose.style.display = 'inline'
-        hamburgerOpen.style.display = 'none'
-        navItemsLower.style.display = 'inline';
-    }
-}
-</script>
-
-<noscript>
-    <!-- Javascript Fallback, if javascript is disabled on the client broswer. -->
-
-    <style>
-        #navItemsLower {
-            display: inline;
-        }
-
-        #hamburger-menu {
-            display: none;
-        }
-    </style>
-</noscript>

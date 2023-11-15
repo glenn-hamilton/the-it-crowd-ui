@@ -5,10 +5,13 @@ WORKDIR /code
 ARG BASE_URL
 ENV BASE_URL ${BASE_URL}
 
+ARG SESSION_SECRET_UI
+ENV SESSION_SECRET_UI ${SESSION_SECRET_UI}
+
 COPY . /code
 
 RUN npm install
 
 EXPOSE 3000
 
-CMD ["npm", "run", "start"] 
+CMD ["npm", "run", "start"]

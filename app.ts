@@ -12,7 +12,7 @@ app.use('/public', express.static(path.join(__dirname, '/public')));
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(session({ secret: 'NOT HARDCODED SECRET', cookie: {maxAge: 3600000} }));
+app.use(session({ secret: process.env.SESSION_SECRET_UI, cookie: {maxAge: 3600000} }));
 
 declare module 'express-session' {
     interface SessionData {

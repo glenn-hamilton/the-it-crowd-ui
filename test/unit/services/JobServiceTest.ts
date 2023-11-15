@@ -1,13 +1,14 @@
+import { describe, it, before, after } from 'mocha';
+import JobService from '../../../services/JobService';
+import axiosInstance from '../../../config';
+import { Job } from '../../../models/Job';
+
 let MockAdapter = require('axios-mock-adapter');
 let chai = require('chai');
 const expect = chai.expect;
-import { describe, it } from 'mocha';
-import JobService from '../../services/JobService';
-import axiosInstance from '../../config';
-import { Job } from '../../models/Job';
-let mock = new MockAdapter(axiosInstance);
 
 let jobService = new JobService();
+let mock: typeof MockAdapter;
 
 const job = [
     {
@@ -17,6 +18,15 @@ const job = [
 ];
 
 describe('JobService', function () {
+
+    before(function() {
+        mock = new MockAdapter(axiosInstance);
+    });
+
+    after(function() {
+        mock = undefined;
+    });
+
     it('Get all jobs should return an array of jobs from the API', async () => {
         mock.onGet('/api/jobs').reply(200, job);
 
@@ -37,4 +47,3 @@ describe('JobService', function () {
         expect(String(error)).to.equal('Error: Could not get jobs');
     });
 });
-

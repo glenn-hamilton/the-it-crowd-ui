@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Docker Container Build 
+name: Docker Container Build
 
 # Controls when the workflow will run
 on:
@@ -39,7 +39,8 @@ jobs:
           BASE_URL: ${{ env.BASE_URL }}
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: employee_demo
+          SESSION_SECRET_UI: ${{ secrets.SESSION_SECRET_UI }}
           IMAGE_TAG: the-it-crowd-ui
         run: |
-          docker build --build-arg BASE_URL=${BASE_URL} -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build --build-arg BASE_URL=${BASE_URL} --build-arg SESSION_SECRET_UI=${SESSION_SECRET_UI} -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG

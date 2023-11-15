@@ -29,8 +29,8 @@ jobs:
       - name: Install packages
         run: npm install
 
-      - name: Run unit-tests
-        run: npm run test-unit
+      - name: Run unit tests
+        run: npm run test
 
       # Run Code Quality Linter Check Using Eslint
       - name: Run Linter Check For Code Quality
