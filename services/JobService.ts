@@ -8,6 +8,7 @@ export default class JobService {
             // console.log("jobs --> ", response.data); 
             return response.data;
         } catch(e){
+            console.error(e);
             throw new Error('Could not get jobs');
         }
     }
