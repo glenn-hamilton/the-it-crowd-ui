@@ -17,7 +17,7 @@ export default class JobService {
             const response = await axiosInstance.get('/api/job-capabilities');
             return response.data;
         } catch (e) {
-            throw new Error('Could not get job capabilitie')
+            throw new Error('Could not get job capabilities');
         }
     }
 }

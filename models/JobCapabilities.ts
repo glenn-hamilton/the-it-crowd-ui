@@ -1,4 +1,4 @@
 export class JobCapabilities  {
-    jobCapabilityId: number
-    jobCapabilityName: string
+    jobCapabilityId: number;
+    jobCapabilityName: string;
 }

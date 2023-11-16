@@ -23,7 +23,7 @@ module.exports = function(app: Application) {
 
             for(let idx in mergedObjects) {
                 let num = Number(idx);
-                let item:any = mergedObjects[num]
+                let item:any = mergedObjects[num];
 
                 if ('jobName' in item) {
                     correctIdx.push(item);
