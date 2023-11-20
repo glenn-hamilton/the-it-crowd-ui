@@ -67,13 +67,10 @@
     <ul>
       <% for (let job of jobs) { %>
         <li>
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="http://localhost:3000/jobs/<%= job.jobId %>" class="list-group-item list-group-item-action">
             <%= job.jobName %>
           </a>
-          <button type="button">
-            <a href="http://localhost:3000/jobs/<%= job.jobId %>">View</a>
-          </button>
-        </li>
+                  </li>
         <% } %>
     </ul>
   </div>
