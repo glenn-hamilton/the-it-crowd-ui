@@ -14,7 +14,7 @@ export default class JobService {
 
     async getJobById(id: number): Promise<Job> {
         try {
-            const response = await axiosInstance.get('/api/jobs/' + id);
+            const response = await axiosInstance.get(`/api/jobs/${id}`);
             return response.data;
         } catch (e) {
             throw new Error('Could not get job');

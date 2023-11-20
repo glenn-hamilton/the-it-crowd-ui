@@ -38,7 +38,7 @@ describe('JobService', function () {
     });
 
     it('Get job by id should return a job from the API', async () => {
-        const id: number = 1; // Define your id here
+        const id: number = 1;
         mock.onGet(`/api/jobs/${id}`).reply(200, job);
 
         let result: Job = await jobService.getJobById(id);
@@ -47,7 +47,7 @@ describe('JobService', function () {
     });
 
     it('should throw an error when the API returns a non-200 status', async () => {
-        const id: number = 111; // Define your id here
+        const id: number = 111;
         mock.onGet(`/api/jobs/${id}`).reply(new Error('Could not get jobs'));
         let error: string;
         try {
