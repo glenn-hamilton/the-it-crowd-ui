@@ -1,8 +1,6 @@
 import {Request, Response, Application} from 'express';
 import {Job} from '../models/Job';
 import JobService from '../services/JobService';
-import { JobCapabilities } from '../models/JobCapabilities';
-import { mergeObjectsByKey } from '../utils/common';
 
 let jobService = new JobService();
 
