@@ -26,6 +26,13 @@
               <a href="/jobs/<%= job.jobId %>">
                 <%= job.jobName %>
               </a>
+              <a href="">
+                <% if (job.jobCapabilityName != 'undefined') { %>
+                  - (<%= job.jobCapabilityName %> )
+                <% } else { %>
+                  - (No Capability Stored)
+                <% } %>
+              </a>
             </li>
 
           <% } %>
