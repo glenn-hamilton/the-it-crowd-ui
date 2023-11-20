@@ -2,7 +2,7 @@ name: "NPM Audit"
 
 on:
   schedule:
-    - cron: "30 14 * * 1-5"
+    - cron: "0 22 * * 1-5"
 
 jobs:
   audit:
