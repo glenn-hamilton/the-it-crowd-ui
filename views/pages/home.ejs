@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= pageTitle %></title> 
+    <%- include('../templates/components/head'); %>
+</head>
+
+<%- include('../templates/components/common-nav'); %>
+
+<body>
+    <div class="main-content centre no-header-image-spacing">
+        <div>
+            <h1>Kainos Careers Portal</h1>
+            <h2>Find out more about your future career today</h2>
+            <p>
+                Welcome to our innovative online job application platform, where simplicity meets efficiency. 
+                We understand the challenges employees and recruitment administrators face in navigating through 
+                the myriad details associated with job roles, from job descriptions and capabilities to competencies 
+                and banding.
+            </p>
+            <p> 
+                Whether you're an employee seeking clarity on your role or a recruitment admin aiming to manage and 
+                update job-related details seamlessly, our platform is designed to meet your needs. Experience a 
+                transformative approach to job application management that enhances accessibility, saves time, and 
+                promotes a more efficient workflow for everyone involved. Welcome to a smarter, more intuitive way of 
+                managing job roles online.
+            </p>
+        </div>
+        <div class="featured-text-component">
+            <h1>What roles are available?</h1>
+            <h2>Learn more about the roles we have to offer</h2>
+            <a href="/jobs"><button>View Jobs</button></a>
+        </div>
+    </div>
+
+    <%- include('../templates/components/divider-banner', { banner: banner }); %>
+</body>
+
+<%- include('../templates/components/common-footer'); %>
+
+</html>

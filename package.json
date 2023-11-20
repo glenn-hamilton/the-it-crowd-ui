@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npx tsc && cp -R views dist && node dist/app.js",
+    "start": "npx tsc && cp -R views dist && cp -R public dist && node dist/app.js",
     "test-unit": "ts-mocha test/unit/**/*.ts",
     "coverage-unit": "nyc npm run test-unit",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/dcorry586/the-it-crowd-ui#readme",
   "dependencies": {
     "axios": "^1.6.0",
+    "bootstrap-icons": "^1.11.1",
     "chai": "^4.3.10",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
