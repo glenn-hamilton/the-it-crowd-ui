@@ -1,0 +1,19 @@
+{
+  "defaults": {
+    "concurrency": 1,
+    "standard": "WCAG2AA",
+    "runners": [
+      "axe"
+    ],
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox"
+      ]
+    },
+    "timeout": 60000
+  },
+  "urls": [
+    "http://127.0.0.1:3000/",
+    "http://127.0.0.1:3000/jobs"
+  ]
+}
