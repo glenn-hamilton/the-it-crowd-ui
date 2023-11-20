@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    <%= pageTitle %>
+  </title>
+  <%- include('../templates/components/head'); %>
+</head>
+
+<%- include('../templates/components/common-nav'); %>
+
+
+
+  <div class="header-image-banner">
+    <div class="overlay"></div>
+    <div class="text-overlay">
+      <h1>
+        <%= job.jobName %>
+      </h1>
+    </div>
+  </div>
+
+  <div class="main-content centre">
+
+    <h2>Job Name</h2>
+    <p>
+      <%= job.jobName %>
+    </p>
+
+    <h2>Job Spec</h2>
+    <a href="<%= job.jobSpecUrl%>" target="_blank">
+      View
+    </a>
+  </div>
+
+  <%- include('../templates/components/common-footer'); %>
+
+</html>
