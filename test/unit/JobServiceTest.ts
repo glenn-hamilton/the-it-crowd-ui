@@ -22,7 +22,7 @@ describe('JobService', function () {
     it('getJobs method should return an array of jobs when API returns a Response 200', async () => {
         mock.onGet('/api/jobs').reply(200, job);
 
-        let result:Job[] = await jobService.getJobs();
+        let result: Job[] = await jobService.getJobs();
 
         expect(result).to.be.an('array');
         expect(result[0]).to.deep.equal(job[0]);
@@ -30,7 +30,7 @@ describe('JobService', function () {
 
     it('getJobs method should throw an error when API displays a non-200 status', async () => {
         mock.onGet('/api/jobs').reply(new Error('Could not get jobs'));
-        let error:string;
+        let error: string;
         try {
             await jobService.getJobs();
         } catch (e) {
@@ -42,7 +42,7 @@ describe('JobService', function () {
     it('getJobCapabilities should return an array of job capabilities array when API returns a Response 200', async () => {
         mock.onGet('/api/job-capabilities').reply(200, job);
 
-        let result:JobCapabilities[] = await jobService.getJobCapabilities();
+        let result: JobCapabilities[] = await jobService.getJobCapabilities();
 
         expect(result).to.be.an('array');
         expect(result[0]).to.deep.equal(job[0]);
@@ -50,7 +50,7 @@ describe('JobService', function () {
 
     it('getJobCapabilities method should throw an error when API displays a non-200 status', async () => {
         mock.onGet('/api/job-capabilities').reply(new Error('Could not get job capabilities'));
-        let error:string;
+        let error: string;
         try {
             await jobService.getJobCapabilities();
         } catch (e) {
