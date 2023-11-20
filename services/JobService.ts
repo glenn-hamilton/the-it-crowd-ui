@@ -7,6 +7,7 @@ export default class JobService {
             const response = await axiosInstance.get('/api/jobs');
             return response.data;
         } catch(e){
+            console.error(e);
             throw new Error('Could not get jobs');
         }
     }
